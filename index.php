@@ -2,8 +2,8 @@
 
 	require_once ("config.php");
 
-	$sql = new Sql();
+	$fulano = new Usuario();
 
-	$usuarios = $sql->select ("SELECT * FROM tb_usuarios");
+	$fulano->loadById(15);
 
-	echo json_encode($usuarios);
+	echo $fulano;
